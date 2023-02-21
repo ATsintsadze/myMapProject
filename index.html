@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="page icon" type="image/png" href="/img/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+
+    <script defer src="script.js"></script>
+    <title>POSTMAP - Easier way for postmans</title>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <img src="img/mainicon.png" alt="logo" class="logo" />
+      <ul class="postmain">
+        <form class="form hidden">
+          <div class="form_row">
+            <label class="form_label">Type</label>
+            <select class="form_input form_input-type">
+              <option value="parcel">Parcel</option>
+              <option value="letter">Letter</option>
+            </select>
+          </div>
+          <div class="form_row">
+            <label class="form_label">Recipient</label>
+            <input class="form_input form_input-name" placeholder="full name" />
+          </div>
+          <div class="form_row">
+            <label class="form_label">Time</label>
+            <input
+              type="time"
+              value="10:00"
+              class="form_input form_input-time"
+              placeholder="time"
+              required
+            />
+          </div>
+          <div class="form_row">
+            <label class="form_label">Weight</label>
+            <input class="form_input form_input-weight" placeholder="kg" />
+          </div>
+          <div class="form_row form_row--hidden">
+            <label class="form_label">Quantity</label>
+            <input
+              class="form_input form_input-quantity"
+              placeholder="lettersQty"
+            />
+          </div>
+          <button class="form-btn">OK</button>
+        </form>
+      </ul>
+      <p class="copyright">
+        &copy; 2023
+        <a class="linksolid" target="_blank" href="#"></a>
+      </p>
+    </div>
+    <div id="map"></div>
+  </body>
+</html>
